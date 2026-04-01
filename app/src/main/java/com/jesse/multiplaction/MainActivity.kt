@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         //Button click listener for multiplication table
         multiplyBtn.setOnClickListener {
            val intent = Intent(this, TableDisplay::class.java)
+            intent.putExtra("tableNumber", enterNumberText.text.toString())
             startActivity(intent)
         }
 
