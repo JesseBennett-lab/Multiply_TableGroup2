@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,7 +17,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        //Variables for design elements
         val multiplyBtn = findViewById<Button>(R.id.multiplyBtn)
+        val enterNumberText = findViewById<EditText>(R.id.enterNumberText)
+
+        //Button click listener for multiplication table
         multiplyBtn.setOnClickListener {
            val intent = Intent(this, TableDisplay::class.java)
             startActivity(intent)

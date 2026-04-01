@@ -15,12 +15,13 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="26dp"
         android:fontFamily="monospace"
-        android:text="Multiplication Tables"
+        android:text="@string/multiplication_tables"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <EditText
         android:id="@+id/enterNumberText"
@@ -30,14 +31,17 @@
         android:layout_marginTop="300dp"
         android:layout_marginEnd="114dp"
         android:layout_marginBottom="159dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="number"
-        android:text="Enter your number"
+        android:minHeight="48dp"
+        android:text="@string/enter_your_number"
         app:layout_constraintBottom_toTopOf="@+id/multiplyBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/multiplyBtn"
@@ -47,7 +51,7 @@
         android:layout_marginTop="159dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="280dp"
-        android:text="Multiply"
+        android:text="@string/multiply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
