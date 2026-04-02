@@ -1,5 +1,6 @@
 package com.jesse.multiplaction
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class TableDisplay : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,6 +20,9 @@ class TableDisplay : AppCompatActivity() {
         val  tableString: String? = bundle?.getString("tableNumber")
         val tableNumber = tableString?.toInt()
         val tableDisplayText = findViewById<TextView>(R.id.tableDisplayText)
+        tableDisplayText.text = "$tableNumber x table"
+
+
 
 
         setContentView(R.layout.activity_table_display)
