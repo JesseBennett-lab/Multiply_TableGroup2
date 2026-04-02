@@ -2,6 +2,7 @@ package com.jesse.multiplaction
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class TableDisplay : AppCompatActivity() {
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "CutPasteId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -17,14 +18,23 @@ class TableDisplay : AppCompatActivity() {
         // assigning data from main to variable
         val bundle: Bundle? = intent.extras
         //getting the number enter by user as string
-        val  tableString: String? = bundle?.getString("tableNumber")
-        val tableNumber = tableString?.toInt()
+        val tableString: String? = bundle?.getString("tableNumber")
+        val tableNumber = tableString!!.toInt()
         val tableDisplayText = findViewById<TextView>(R.id.tableDisplayText)
-        tableDisplayText.text = "$tableNumber x table"
+        var timesTxt: String = "$tableNumber x table\n\n"
 
+        var counter =  1
 
+        tableDisplayText.text = timesTxt
 
+        while(counter <= 10){
+            val answer = tableNumber * counter
 
+            timesTxt += "$tableNumber x $counter= ${answer}\n"
+            counter++
+        }
+
+        //set
         setContentView(R.layout.activity_table_display)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
