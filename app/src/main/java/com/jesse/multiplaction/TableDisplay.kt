@@ -28,6 +28,7 @@ class TableDisplay : AppCompatActivity() {
         tableDisplayText.text = timesTxt
 
         while(counter <= 10){
+
             val answer = tableNumber * counter
 
             timesTxt += "$tableNumber x $counter= ${answer}\n"
