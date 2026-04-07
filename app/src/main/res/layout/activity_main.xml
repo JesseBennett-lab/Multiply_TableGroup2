@@ -35,7 +35,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="@string/enter_your_number"
+        android:hint="@string/enter_your_number"
         app:layout_constraintBottom_toTopOf="@+id/multiplyBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
