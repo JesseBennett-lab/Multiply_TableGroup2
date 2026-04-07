@@ -5,21 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6A000000"
     tools:context=".TableDisplay">
 
     <TextView
         android:id="@+id/tableDisplayText"
-        android:layout_width="247dp"
-        android:layout_height="507dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="285dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="327dp"
-        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="32dp"
+        android:gravity="center_horizontal"
+        android:textColor="#009688"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        tools:text="1 x table\n\n1 x 1 = 1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
