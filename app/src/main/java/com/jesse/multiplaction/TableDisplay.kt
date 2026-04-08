@@ -31,7 +31,7 @@ class TableDisplay : AppCompatActivity() {
         var timesTxt = "$tableNumber x table\n\n"
 
         var counter = 1
-        while (counter <= 10) {
+        while (counter <= 20) {
             val answer = tableNumber * counter
             timesTxt += "$tableNumber x $counter = $answer\n"
             counter++
